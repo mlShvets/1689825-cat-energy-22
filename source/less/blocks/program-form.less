@@ -1,0 +1,87 @@
+.program-form__fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.program-form__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.program-form__item {
+  margin-bottom: 13px;
+}
+
+.program-form__title {
+  font-family: @font-oswald;
+  font-size: 24px;
+  line-height: 26px;
+  color: @black;
+  margin-bottom: 35px;
+}
+
+.program-form__label,
+.program-form__input {
+  font-family: @font-oswald;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.program-form__input {
+  border: 1px solid @border-input;
+  box-sizing: border-box;
+  color: @text-color;
+
+  &:focus,
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:active {
+    border-color: @text-color;
+    outline: 1px solid @text-color;
+  }
+
+  // &:invalid {
+  //   border-color: #ff8282;
+  //   outline: 1px solid #ff8282;
+  // }
+}
+
+.program-form__fieldset--information .program-form__input,
+.program-form__fieldset--contact .program-form__input {
+  height: 46px;
+}
+
+.program-form__label--radio {
+  color: #222222;
+}
+
+.program-form__label--checkbox {
+  color: @black;
+}
+
+.program-form__button {
+  font-size: 16px;
+  line-height: 20px;
+  height: 40px;
+}
+
+.program-form__fieldset--comment {
+  display: flex;
+  flex-direction: column;
+}
+
+.program-form__textarea {
+  min-width: 280px;
+  min-height: 150px;
+  resize: vertical;
+}
+
+.program-form__footnotes {
+  line-height: 16px;
+  color: @black;
+}

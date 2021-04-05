@@ -1,3 +1,25 @@
+.statistics {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    width: 366px;
+  }
+}
+
+.statistics__list {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    width: 366px;
+  }
+}
+
+
 .statistics__item {
   border: 1px solid #cdcdcd;
   border-radius: 3px;
@@ -23,4 +45,9 @@
   line-height: 20px;
   text-transform: uppercase;
   color: @black;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }

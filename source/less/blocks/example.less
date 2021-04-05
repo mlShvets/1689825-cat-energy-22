@@ -1,5 +1,16 @@
 .example {
   background-color: @special-gray;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+}
+
+.example__content {
+  @media (min-width: @desktop-width) {
+    width: 436px;
+    margin-right: 100px;
+  }
 }
 
 .example__title {

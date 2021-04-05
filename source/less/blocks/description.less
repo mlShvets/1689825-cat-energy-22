@@ -10,4 +10,16 @@
   list-style: none;
   padding: 0;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 278px 278px;
+    grid-column-gap: 150px;
+    grid-row-gap: 37px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 248px);
+    grid-column-gap: 80px;
+  }
 }

@@ -10,10 +10,19 @@
 
 .product-info__item {
   display: flex;
+  justify-content: space-between;
 }
 
 .product-info__characteristic,
 .product-info__value {
   font-size: 12px;
   line-height: 16px;
+}
+
+.product-info__title {
+  text-align: left;
+
+  @media (min-width: @tablet-width) {
+    text-align: center;
+  }
 }

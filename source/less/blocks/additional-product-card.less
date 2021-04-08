@@ -1,5 +1,6 @@
 .additional-product-card__list {
   display: flex;
+  justify-content: space-between;
 }
 
 .additional-product-card__title {
@@ -22,4 +23,13 @@
   line-height: 20px;
   height: 40px;
   padding: 10px;
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 3;
+  }
 }

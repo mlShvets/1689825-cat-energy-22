@@ -1,17 +1,35 @@
 .example {
   background-color: @special-gray;
+  padding-bottom: 37px;
+
+  @media (min-width: @tablet-width) {
+    background: linear-gradient(to top, @special-gray 100%, @white 0%) no-repeat;
+    background-size: 100% 462px;
+    background-position-y: bottom;
+    padding-bottom: 68px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 24px;
+  }
 }
 
 .example__wraper {
   @media (min-width: @desktop-width) {
     display: flex;
+    justify-content: space-between;
   }
 }
 
 .example__content {
+  margin-bottom: 45px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 51px;
+  }
+
   @media (min-width: @desktop-width) {
     width: 436px;
-    margin-right: 100px;
   }
 }
 
@@ -21,4 +39,32 @@
   color: @black;
   font-family: @font-oswald;
   font-weight: normal;
+  margin: 0;
+  padding-top: 27px;
+  margin-bottom: 33px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 64px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 54px;
+    padding-top: 0;
+    margin-bottom: 147px;
+  }
+}
+
+.example__text {
+  margin: 0;
+  margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 53px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 69px;
+  }
 }

@@ -1,25 +1,100 @@
-.description__title {
-  font-family: @font-oswald;
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 40px;
-  color: @black;
+.description {
+  margin-bottom: 42px;
+
+  @media (min-width: @tablet-width) {
+    border-bottom: 1px solid @border-item;
+    margin-bottom: 17px;
+  }
+
+  @media (min-width: @desktop-width) {
+    border: none;
+  }
 }
 
 .description__list {
   list-style: none;
   padding: 0;
   margin: 0;
+  counter-reset: feature;
 
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-template-columns: 278px 278px;
-    grid-column-gap: 150px;
-    grid-row-gap: 37px;
+    grid-template-columns: repeat(2, 35%);
+    grid-column-gap: calc(40% - 147px);
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 248px);
-    grid-column-gap: 80px;
+    grid-column-gap: 77px;
   }
+}
+
+.description__item {
+  position: relative;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: @green;
+    flex-shrink: 0;
+    margin-right: 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 32px;
+    margin-bottom: 5px;
+    display: block;
+    min-height: 280px;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+      margin-right: 0;
+      margin-bottom: 32px;
+    }
+
+    &::after {
+      position: absolute;
+      content: counter(feature);
+      counter-increment: feature;
+      top: -38px;
+      right: 0;
+      width: 136px;
+      height: 280px;
+      font-size: 280px;
+      line-height: 280px;
+      font-family: @font-oswald;
+      color: @gray;
+      z-index: -1;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 233px;
+  }
+}
+
+.description__title {
+  font-family: @font-oswald;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 40px;
+  color: @black;
+  margin: 0;
+  margin-bottom: 38px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 40px;
+  }
+}
+
+.description__text {
+  margin: 0;
 }

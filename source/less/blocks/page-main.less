@@ -1,13 +1,62 @@
+.page-main__header {
+  margin-bottom: 38px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 67px;
+  }
+}
+
 .page-main__title {
   font-family: @font-oswald;
   font-weight: normal;
   font-size: 36px;
   line-height: 36px;
   color: @black;
+  margin-top: 27px;
+  margin-bottom: 37px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-top: 0;
+    padding-top: 3px;
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 53px;
+  }
 }
 
 .page-main__description {
   font-family: @font-oswald;
   color: @black;
   text-transform: uppercase;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    width: 323px;
+  }
+}
+
+.page-main--form {
+  overflow-x: hidden;
+
+  .container {
+    @media (min-width: @tablet-width) {
+      padding: 0 69px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 0 40px;
+      max-width: 1300px;
+      box-sizing: border-box;
+    }
+  }
 }

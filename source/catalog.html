@@ -16,9 +16,9 @@
           alt="Логотип Cat Energy">
         <img class="logo__text" src="https://via.placeholder.com/101x18" width="101" height="18" alt="Cat Energy">
       </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span></button>
+      <nav class="main-nav main-nav--opened">
+        <button class="main-nav__toggle" type="button" aria-label="Открыть меню">
+          <span class="main-nav__toggle--bar"></span></button>
         <ul class="main-nav__list">
           <li class="main-nav__item"><a href="index.html">Главная</a></li>
           <li class="main-nav__item main-nav__item--current"><a>Каталог продукции</a></li>
@@ -27,11 +27,11 @@
       </nav>
     </div>
   </header>
-  <main class="page-main container">
-    <div class="page-main__header">
+  <main class="page-main page-main--catalog">
+    <div class="page-main__header container">
       <h1 class="page-main__title">Каталог продукции</h1>
     </div>
-    <section class="page-main__catalog catalog">
+    <section class="page-main__catalog catalog container">
       <h2 class="visually-hidden">Каталог питания для кота</h2>
       <ul class="catalog__list">
         <li class="catalog__item">
@@ -53,7 +53,7 @@
               </div>
               <div class="product-info__item">
                 <dt class="product-info__characteristic">Цена</dt>
-                <dd class="product-info__value">700 р.</dd>
+                <dd class="product-info__value product-info__value--price">700 р.</dd>
               </div>
             </dl>
           </div>
@@ -78,7 +78,7 @@
               </div>
               <div class="product-info__item">
                 <dt class="product-info__characteristic">Цена</dt>
-                <dd class="product-info__value">1000 р.</dd>
+                <dd class="product-info__value product-info__value--price">1000 р.</dd>
               </div>
             </dl>
           </div>
@@ -103,7 +103,7 @@
               </div>
               <div class="product-info__item">
                 <dt class="product-info__characteristic">Цена</dt>
-                <dd class="product-info__value">700 р.</dd>
+                <dd class="product-info__value product-info__value--price">700 р.</dd>
               </div>
             </dl>
           </div>
@@ -128,7 +128,7 @@
               </div>
               <div class="product-info__item">
                 <dt class="product-info__characteristic">Цена</dt>
-                <dd class="product-info__value">1000 р.</dd>
+                <dd class="product-info__value product-info__value--price">1000 р.</dd>
               </div>
             </dl>
           </div>
@@ -153,7 +153,7 @@
               </div>
               <div class="product-info__item">
                 <dt class="product-info__characteristic">Цена</dt>
-                <dd class="product-info__value">400 р.</dd>
+                <dd class="product-info__value product-info__value--price">400 р.</dd>
               </div>
             </dl>
           </div>
@@ -178,7 +178,7 @@
               </div>
               <div class="product-info__item">
                 <dt class="product-info__characteristic">Цена</dt>
-                <dd class="product-info__value">700 р.</dd>
+                <dd class="product-info__value product-info__value--price">700 р.</dd>
               </div>
             </dl>
           </div>
@@ -203,22 +203,24 @@
               </div>
               <div class="product-info__item">
                 <dt class="product-info__characteristic">Цена</dt>
-                <dd class="product-info__value">500 р.</dd>
+                <dd class="product-info__value product-info__value--price">500 р.</dd>
               </div>
             </dl>
           </div>
           <a class="catalog__button button" href="#">Заказать</a>
         </li>
-        <li class="catalog__item">
-          <div class="more-products">
+        <li class="catalog__item more-products">
+          <div class="more-products__wraper">
+          <div class="more-products__info">
             <h3 class="more-products__title">Показать еще 100500 товаров</h3>
             <p class="more-products__text">На самом деле вкусов гораздо больше!</p>
           </div>
-          <a class="catalog__button catalog__button--last button" href="#">Показать все</a>
+          <a class="catalog__button more-products__button button" href="#">Показать все</a>
+        </div>
         </li>
       </ul>
     </section>
-    <section class="page-main__additional additional-product">
+    <section class="page-main__additional additional-product container">
       <h2 class="additional-product__title">Дополнительные товары</h2>
       <ul class="additional-product__list">
         <li class="additional-product__item additional-product-card">
@@ -255,27 +257,26 @@
         </li>
       </ul>
       <div class="additional-product__promo product-promo">
-        Закажите все и получите чехол для кота в подарок!
+        <p class="product-promo__slogan">Закажите все и&nbsp;получите чехол для кота в подарок!</p>
       </div>
     </section>
   </main>
   <footer class="page-footer">
     <div class="page-footer__contacts">
-      <section class="contacts container">
-        <h2 class="visually-hidden">Контакты</h2>
-        <p class="contacts__invite">Приглашаем
-          к сотрудничеству дилеров!</p>
-        <address class="contacts__address">
-          ул. Большая Конюшенная, д. 19/8 <span class="contacts__sity">Санкт-Петербург</span>
-        </address>
-      </section>
-    </div>
-      <div class="page-footer__map">
+    <section class="contacts container">
+      <h2 class="visually-hidden">Контакты</h2>
+      <p class="contacts__invite">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
+      <address class="contacts__address">
+        ул. Большая Конюшенная, д. 19/8 <span class="contacts__sity">Санкт-Петербург</span>
+      </address>
+    </section>
+  </div>
+    <div class="page-footer__map">
       <img src="https://via.placeholder.com/320x362" width="320" height="362"
         alt="Расположение офиса: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8">
     </div>
     <div class="page-footer__info container">
-      <a class="page-footer__logo footer-logo" href="index.html">
+      <a class="page-footer__logo footer-logo">
         <img class="footer-logo__image" src="https://via.placeholder.com/128x24" width="128" height="24"
           alt="Логотип Cat Energy">
       </a>

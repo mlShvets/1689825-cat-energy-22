@@ -1,13 +1,48 @@
 .product-promo {
   background-color: @promo-green;
-  font-size: 16px;
-  line-height: 20px;
-  color: @white;
-  height: 289px;
+  min-height: 289px;
   text-align: center;
+  padding: 41px 57px;
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 200px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 124px;
+    margin-bottom: 75px;
+  }
 
   @media (min-width: @desktop-width) {
     grid-column-start: 2;
     grid-row-start: 2;
+    padding: 0;
+    height: 289px;
+    margin: 0;
+    align-items: center;
+    flex-direction: column;
+    justify-content: normal;
+  }
+}
+
+.product-promo__slogan {
+  font-size: 16px;
+  line-height: 20px;
+  color: @white;
+  margin: 0;
+  margin-top: 147px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 161px;
+    margin-top: 70px;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 187px;
+    text-align: center;
   }
 }

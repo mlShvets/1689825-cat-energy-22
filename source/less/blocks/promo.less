@@ -1,12 +1,12 @@
 .promo {
   margin-bottom: 22px;
-  background-image: linear-gradient(to bottom, rgba(104, 183, 56, 0.85) 100%, @white 0%), url("../img/index/index-background-mobile.png");
+  background-image: linear-gradient(rgba(104, 183, 56, 0.87) 100%, white 0%), url("../img/index/index-background-mobile.png"), linear-gradient(#65a83d 100%, white 0%);
   background-repeat: no-repeat;
-  background-size: 100% 302px;
-  background-position: center top;
+  background-size: 320px 302px, 320px 302px, auto 302px;
+  background-position: top center;
 
   @media (min-resolution: 2dppx) {
-    background-image: linear-gradient(to bottom, rgba(104, 183, 56, 0.85) 100%, @white 0%), url("../img/index/index-background-mobile@2x.png");
+    background-image: linear-gradient(rgba(104, 183, 56, 0.87) 100%, white 0%), url("../img/index/index-background-mobile@2x.png"), linear-gradient(#65a83d 100%, white 0%);
   }
 
   @media (min-width: @tablet-width) {
@@ -27,13 +27,16 @@
   align-items: center;
 
   @media (min-width: @tablet-width) {
+    width: 709px;
     display: grid;
+    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr 1fr;
     margin-bottom: 148px;
     margin-top: 14px;
+    width: 100%;
   }
 }
 

@@ -7,7 +7,20 @@
   justify-content: space-between;
   align-items: center;
 
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     width: 163px;
   }
+}
+
+.copyright svg {
+  fill: #666666;
+}
+
+.copyright:focus svg,
+.copyright:hover svg {
+  fill: @green;
 }

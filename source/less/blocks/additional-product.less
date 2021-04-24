@@ -1,4 +1,8 @@
 .additional-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 245px;
@@ -11,10 +15,10 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-bottom: 38px;
+  margin-bottom: 22px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 70px;
+    margin-bottom: 69px;
   }
 
   @media (min-width: @desktop-width) {
@@ -53,6 +57,7 @@
   width: fit-content;
   background-color: @white;
   margin-bottom: 36px;
+  margin-top: 0;
 
   &::after,
   &::before {
@@ -75,13 +80,14 @@
     margin-bottom: 80px;
     padding-right: 40px;
     padding-left: 36px;
-    margin-top: 11px;
+    margin-top: 9px;
 
     &::before {
       left: -100vw;
     }
 
     @media (min-width: @desktop-width) {
+      margin-top: 13px;
       padding-left: 0;
 
       &::before {

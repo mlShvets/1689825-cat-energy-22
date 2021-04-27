@@ -42,6 +42,12 @@
           питание для котов</h2>
         <p class="promo__text">Занялся собой? Займись котом!</p>
         <picture class="promo__picture">
+          <source type="image/webp" media="(min-width: 1300px)"
+            srcset="img/index/index-promo.webp 1x, img/index/index-promo@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/photo-1-tablet.webp 1x, img/index/index-promo-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/img/index/index-promo-mobile.webp 1x, img/index/index-promo-mobile@2x.webp 2x">
+
           <source media="(min-width: 1300px)" srcset="img/index/index-promo.png 1x, img/index/index-promo@2x.png 2x">
           <source media="(min-width: 768px)"
             srcset="img/index/index-promo-tablet.png 1x, img/index/index-promo-tablet@2x.png 2x">
@@ -174,22 +180,27 @@
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" aria-label="Мы в Вконтакте">
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy"
+              aria-label="Мы в Вконтакте">
               <svg class="social__icon social__icon--vkontakte" width="23" height="13">
                 <use xlink:href="img/icons/sprite.svg#icon-vkontakte"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy" aria-label="Мы в Инстаграме">
+            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy"
+              aria-label="Мы в Инстаграме">
               <svg class="social__icon social__icon--instagram" width="16" height="16">
                 <use xlink:href="img/icons/sprite.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
-              <span>Мы в Фейсбуке</span>
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy"
+              aria-label=">Мы в Фейсбуке">
+              <svg class="social__icon social__icon--facebook" width="13" height="20">
+                <use xlink:href="img/icons/sprite.svg#icon-facebook"></use>
+              </svg>
             </a>
           </li>
         </ul>

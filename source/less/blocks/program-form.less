@@ -94,6 +94,17 @@
     border-color: #cdcdcd;
   }
 
+  &:focus {
+    & + .program-form__icon--mail {
+      stroke: @green;
+      fill: #ffffff;
+    }
+
+    & + .program-form__icon--phone {
+      fill: @green;
+    }
+  }
+
   &:active {
     border-color: @text-color;
     outline: 1px solid @text-color;
@@ -102,6 +113,15 @@
   &:focus:invalid {
     border-color: #ff8282;
     outline: 1px solid #ff8282;
+
+    & + .program-form__icon--mail {
+      fill: #ffffff;
+      stroke: #ff8282;
+    }
+
+    & + .program-form__icon--phone {
+      fill: #ff8282;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -251,12 +271,6 @@
     margin-right: 11px;
   }
 
-  img {
-    position: absolute;
-    top: 30%;
-    right: 15px;
-  }
-
   @media (min-width: @tablet-width) {
     margin-bottom: 44px;
 
@@ -279,6 +293,22 @@
       grid-column-gap: 80px;
     }
   }
+}
+
+
+.program-form__icon {
+  position: absolute;
+  top: 30%;
+  right: 15px;
+}
+
+.program-form__icon--mail {
+  stroke: #222222;
+  fill: #ffffff;
+}
+
+.program-form__icon--phone {
+  fill: #222222;
 }
 
 .program-form__fieldset--comment {
@@ -375,7 +405,7 @@
     left: 7px;
     width: 18px;
     height: 14px;
-    background: url("../img/icons/checkbox-mark.svg") no-repeat;
+    background: url("data:image/svg+xml,%3Csvg width='19' height='15' viewBox='0 0 19 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 11.718L1.3 5.26951L0.25 6.45739L7 14.0938L18.25 1.36648L17.2 0.09375L7 11.718Z' fill='%2368B738'/%3E%3C/svg%3E%0A") no-repeat;
 
     @media (min-width: @tablet-width) {
       top: 8px;

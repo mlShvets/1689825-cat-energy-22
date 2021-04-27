@@ -89,12 +89,15 @@
   color: @text-color;
   padding-left: 14px;
 
-  &:focus,
+
   &:hover {
     border-color: #cdcdcd;
   }
 
   &:focus {
+    border-color: #444444;
+    outline: 1px solid #444444;
+
     & + .program-form__icon--mail {
       stroke: @green;
       fill: #ffffff;

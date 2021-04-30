@@ -9,14 +9,33 @@
 .page-footer__map {
   height: 362px;
   margin-bottom: 38px;
+  background-image: url("../img/map-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/map-mobile@2x.png");
+  }
+
 
   @media (min-width: @tablet-width) {
     height: 400px;
     margin-bottom: 53px;
+    background-image: url("../img/map-tablet.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-tablet@2x.png");
+    }
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 58px;
+    background-image: url("../img/map-desktop.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-desktop@2x.png");
+    }
   }
 }
 

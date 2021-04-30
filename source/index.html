@@ -9,7 +9,7 @@
   <link rel="icon" href="img/icons/favicon/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/icons/favicon/icon180.png">
   <link rel="manifest" href="favicon.webmanifest">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="page-body">
@@ -23,7 +23,7 @@
         </picture>
         <img class="logo__text" src="img/icons/footer-logo.svg" width="101" height="18" alt="Cat Energy">
       </a>
-      <nav class="main-nav main-nav--opened">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button" aria-label="Открыть меню">
           <span class="main-nav__toggle__bar"></span></button>
         <ul class="main-nav__list main-nav__list--index">
@@ -130,16 +130,26 @@
           <div class="slider__wraper">
             <div class="slider__image slider__image--before slider__image--current">
               <picture>
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/index/cat-fat.webp 1x, img/index/cat-fat@2x.webp 2x">
+              <source type="image/webp"
+                srcset="img/index/cat-fat-mobile.webp 1x, img/index/cat-fat-mobile@2x.webp 2x">
+
                 <source media="(min-width: 768px)" srcset="img/index/cat-fat.png 1x, img/index/cat-fat@2x.png 2x">
-                <img class="slider__picture" src="img/index/cat-before-mobile.png"
-                  srcset="img/index/cat-before-mobile@2x.png 2x" alt="Толстый кот">
+                <img class="slider__picture" src="img/index/cat-fat-mobile.png"
+                  srcset="img/index/cat-fat-mobile@2x.png 2x" alt="Толстый кот">
               </picture>
             </div>
             <div class="slider__image slider__image--after">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/index/cat-skinny.webp 1x, img/index/cat-skinny@2x.webp 2x">
+              <source type="image/webp"
+                srcset="img/index/cat-skinny-mobile.webp 1x, img/index/cat-skinny-mobile@2x.webp 2x">
+
                 <source media="(min-width: 768px)" srcset="img/index/cat-skinny.png 1x, img/index/cat-skinny@2x.png 2x">
-                <img class="slider__picture" src="img/index/cat-after-mobile.png"
-                  srcset="img/index/cat-after-mobile@2x.png 2x" alt="Толстый кот">
+                <img class="slider__picture" src="img/index/cat-skinny-mobile.png"
+                  srcset="img/index/cat-skinny-mobile@2x.png 2x" alt="Толстый кот">
               </picture>
             </div>
           </div>
@@ -166,8 +176,6 @@
       </section>
     </div>
     <div class="page-footer__map">
-      <!-- <img src="https://via.placeholder.com/320x362" width="320" height="362"
-        alt="Расположение офиса: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8"> -->
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533282!2d30.320858716389694!3d59.93871648187613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1619078176661!5m2!1sru!2sru"
         width="600" height="450" style="border: 0;" allowfullscreen="" loading="lazy"
@@ -215,7 +223,7 @@
     </div>
   </footer>
 
-
+  <script src="js/script.min.js"></script>
 
 </body>
 

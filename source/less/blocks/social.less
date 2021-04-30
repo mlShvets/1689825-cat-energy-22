@@ -45,11 +45,13 @@
 
 
 .social__link {
-  &:hover .social__icon {
+  &:hover .social__icon,
+  &:focus .social__icon {
     fill: @green;
   }
 
-  &:hover .social__icon--facebook {
+  &:hover .social__icon--facebook,
+  &:focus .social__icon--facebook {
     stroke: @green;
     fill: transparent;
   }

@@ -15,11 +15,12 @@
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
-    width: 440px;
+    width: 453px;
+    flex-wrap: wrap;
   }
 
   @media (min-width: @desktop-width) {
-    width: 478px;
+    width: 491px;
   }
 }
 
@@ -47,11 +48,12 @@
 
   @media (min-width: @tablet-width) {
     border: none;
-    margin: 0;
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
+    margin: 11px 0 0 13px;
     padding: 0;
+    padding-bottom: 10px;
   }
 
   @media (min-width: @desktop-width) {
@@ -72,7 +74,7 @@
       background-color: @green;
       right: 0;
       left: 0;
-      bottom: -9px;
+      bottom: 0;
     }
   }
 }

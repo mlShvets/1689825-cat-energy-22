@@ -1,27 +1,24 @@
 .promo {
   margin-bottom: 22px;
-  background-image: linear-gradient(rgba(104, 183, 56, 0.87) 100%, white 0%), url("../img/index/index-background-mobile.png"), linear-gradient(#65a83d 100%, white 0%);
+  background-image: linear-gradient(to top, @white 0, rgba(104, 183, 56, 0.87) 0), url("../img/index/index-background-mobile.jpg"), linear-gradient(to top, @white 178px, #65a83d 0);
   background-repeat: no-repeat;
   background-size: 320px 302px, 320px 302px, auto 302px;
-  background-position: top center;
+  background-position: top center, top center, bottom;
+  background-color: #65a83d;
 
-  @media (min-resolution: 2dppx) {
-    background-image: linear-gradient(rgba(104, 183, 56, 0.87) 100%, white 0%), url("../img/index/index-background-mobile@2x.png"), linear-gradient(#65a83d 100%, white 0%);
+  @media (max-width: 767px) {
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(to top, @white 0, rgba(104, 183, 56, 0.87) 0), url("../img/index/index-background-mobile@2x.jpg"), linear-gradient(to top, @white 178px, #65a83d 0);
+    }
   }
 
   @media (min-width: @tablet-width) {
     background: none;
     margin-bottom: 0;
   }
-
-  @media (min-width: @desktop-width) {
-    padding: 0 40px;
-    max-width: 1300px;
-    margin: 0 auto;
-  }
 }
 
-.promo__content {
+.promo__wraper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,7 +26,6 @@
   @media (min-width: @tablet-width) {
     width: 709px;
     display: grid;
-    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
@@ -37,6 +33,14 @@
     margin-bottom: 148px;
     margin-top: 14px;
     width: 100%;
+  }
+}
+
+.promo__content {
+  min-height: 166px;
+
+  @media (min-width: @tablet-width) {
+    min-height: auto;
   }
 }
 
@@ -95,26 +99,25 @@
 }
 
 .promo__link {
-  height: 40px;
-  padding-top: 11px;
+  padding: 11px 0;
   width: 100%;
 
   @media (min-width: @tablet-width) {
     grid-row-start: 3;
     grid-column-start: 1;
     width: 244px;
-    height: 54px;
-    padding-top: 18px;
+    padding: 17px 0;
     font-size: 20px;
     line-height: 20px;
     z-index: 1;
-    margin-top: 28px;
+    margin-top: 29px;
     margin-left: 82px;
   }
 
   @media (min-width: @desktop-width) {
     margin-left: 80px;
     margin-top: 33px;
+    grid-row-start: 2;
   }
 }
 

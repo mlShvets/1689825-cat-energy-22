@@ -24,8 +24,10 @@
     left: 100px;
   }
 
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/catalog/gift-mobile@2x.jpg");
+  @media (max-width: 767px) {
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/catalog/gift-mobile@2x.jpg");
+    }
   }
 
   @media (min-width: @tablet-width) {

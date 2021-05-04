@@ -7,17 +7,19 @@
 }
 
 .page-footer__map {
-  height: 362px;
-  margin-bottom: 38px;
-  background-image: url("../img/map-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/map-mobile@2x.jpg");
-  }
+  @media (max-width: 767px) {
+    height: 362px;
+    margin-bottom: 38px;
+    background-image: url("../img/map-mobile.jpg");
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-mobile@2x.jpg");
+    }
+  }
 
   @media (min-width: @tablet-width) {
     height: 400px;

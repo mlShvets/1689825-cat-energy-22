@@ -155,7 +155,7 @@ const watcher = () => {
   gulp.watch("source/*.html", gulp.series(html, reload));
 }
 
-// Группировка медиа запроов
+// Группировка медиа запросов
 
 const combine = () => {
   return gulp.src('build/css/style.min.css')

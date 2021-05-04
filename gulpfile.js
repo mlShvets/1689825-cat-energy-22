@@ -13,6 +13,7 @@ const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
 const sync = require("browser-sync").create();
+const combineMq = require("gulp-group-css-media-queries");
 
 // Styles
 
@@ -154,6 +155,18 @@ const watcher = () => {
   gulp.watch("source/*.html", gulp.series(html, reload));
 }
 
+// Группировка медиа запроов
+
+const combine = () => {
+  return gulp.src('build/css/style.min.css')
+  .pipe(combineMq({
+      beautify: false
+  }))
+  .pipe(gulp.dest('build/css'));
+};
+
+exports.combine = combine;
+
 // Build
 
 const build = gulp.series(
@@ -167,6 +180,9 @@ const build = gulp.series(
     sprite,
     createWebp
   ),
+  gulp.series(
+    combine
+  )
 );
 
 exports.build = build;
